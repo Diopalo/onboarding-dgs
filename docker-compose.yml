@@ -1,0 +1,9 @@
+# Défi 1 — fichier corrigé pour servir index.html
+# Objectif : la page index.html doit s'afficher sur http://localhost:8080
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html:ro
